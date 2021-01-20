@@ -39,5 +39,5 @@ The websites that are used in this project include: <br/>
 7. Open a browser window and enter localhost:5000.  The application should run.
 
 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nbcnews.com%2Fscience%2Fenvironment%2Fwildfires-rage-climate-experts-warn-future-we-were-worried-about-n1240456&psig=AOvVaw3ozCUytFLWJlLM_W9RR4eW&ust=1611198885346000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDyqdzFqe4CFQAAAAAdAAAAABAD)
+![Uploading 200911-wildfire-california-worst-widlfire-year-se-236p_f66f4d02e7ec04cbe3ed0c47dfc8037e.jpg…]()
 
