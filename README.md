@@ -21,6 +21,7 @@ The websites that are used in this project include: <br/>
 1.	1.88 Million US Wildfires available from Kaggle <br/>
 - Data for the project will be refined given the number and volume of data exceeding 1,213,546 fires and burning 140,132,509 acres over a 24 year period. <br/>
 - Current proposed data set to focus on .... which results in a refined fire count of .... representing ....of the total acreage burned. <br/>
+2.  Weather data will be called via API from https://weatherstack.com/ <br/>
 
 # Example of Figures<br/>
 1. 1 <br/>
@@ -28,6 +29,8 @@ The websites that are used in this project include: <br/>
 5. Proposed library to be used www.chartjs.org <br/>
 
 # Recreating Application
+1. We will be making API calls from weatherstack.com and matching that data via dates and lat/long with the wildfire locations. 
+1.
 1. Create a postgres database with database called wildfires_db
 2. Run create_tables_wildfires.sql file to create wildfires table
 3. Import fires_ClassG_YEAR2000_2015.csv into wildfires table
