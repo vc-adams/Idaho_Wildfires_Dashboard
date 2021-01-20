@@ -1,2 +1,2 @@
 # Project3
-Machine Learning project to predict US wilfires
+Machine Learning project to predict US wildfires
