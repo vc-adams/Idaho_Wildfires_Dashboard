@@ -39,5 +39,6 @@ The websites that are used in this project include: <br/>
 7. Open a browser window and enter localhost:5000.  The application should run.
 
 
-![Uploading 200911-wildfire-california-worst-widlfire-year-se-236p_f66f4d02e7ec04cbe3ed0c47dfc8037e.jpg…]()
+![200911-wildfire-california-worst-widlfire-year-se-236p_f66f4d02e7ec04cbe3ed0c47dfc8037e](https://user-images.githubusercontent.com/58762374/105122573-134acf80-5a9c-11eb-8257-96803a88f7e2.jpg)
+
 
