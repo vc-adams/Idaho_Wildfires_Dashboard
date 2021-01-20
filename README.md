@@ -20,12 +20,10 @@ We will expand on what was learned and visualized in project two, by answering s
 The websites that are used in this project include: <br/>
 1.	1.88 Million US Wildfires available from Kaggle <br/>
 - Data for the project will be refined given the number and volume of data exceeding 1,213,546 fires and burning 140,132,509 acres over a 24 year period. <br/>
-- Current proposed data set to focus on the largest fires greater than 1000 acres which results in a refined fire count of 11,559 representing ~86% of the total acreage burned. <br/>
+- Current proposed data set to focus on .... which results in a refined fire count of .... representing ....of the total acreage burned. <br/>
 
 # Example of Figures<br/>
 1. 1 <br/>
-2. 2 <br/>
-3. 3 <br/>
 4. Slider of events using Javascript https://plotly.com/javascript/sliders/ <br/>
 5. Proposed library to be used www.chartjs.org <br/>
 
