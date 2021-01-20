@@ -1,15 +1,17 @@
 
-# Group 7 Project 3 – US Wildfires Database; Machine Learning Expansion Project <br/>
+# Group 7, Project 3 – US Wildfires Database; Machine Learning Expansion Project <br/>
 Members: Kaylon Young, Vincent Adams, Emeka Obianyor, Rob Pascarella
 
 # Abstract:<br/>
-In Project 2, large class wildfire data (Class G only - the largest fires which engulf 5000+ acres) was explored and visualized using a plethora of tools recently learned.  We can expand on that project by utilizing more of the dataset, combining it with hisotical weather data, and creating machine learning models in an attempt to categorize a risk score for the upcoming wildfire season, and/or instance. <br/>
-
---from Project 2-- <br/>
+--Exerpt from Project 2-- <br/>
 Wildfires don’t stop where the wilderness ends. They burn through communities and neighborhoods, destroying property and taking lives. With climate-driven increases in wildfires in the U.S., it is imperative to understand how the risk to homes is also changing nationwide. The convergence of warmer, drier conditions and greater development into flammable landscapes is leaving many communities vulnerable to human-caused wildfires. <br/>
 
-The objective of this project was to extract and explore a publicly available spatial database of wildfires that occurred in the United States from 1992 to 2015 and includes 1.88 million geo-referenced wildfire records, representing a total of 140 million acres burned during the 24-year period.<br/>
-The questions that this project proposes to answer are:<br/>
+The objective of this project was to extract and explore a publicly available spatial database of wildfires that occurred in the United States from 1992 to 2015 and includes 1.88 million geo-referenced wildfire records, representing a total of 140 million acres burned during the 24-year period. <br/>
+
+-- <br/>
+As explained above, from Project 2, large class wildfire data (Class G only - the largest fires which engulf 5000+ acres) was explored and visualized using a plethora of tools recently learned.  We can expand on that project by utilizing more of the dataset, combining it with hisotical weather data, and creating machine learning models in an attempt to categorize a risk score for the upcoming wildfire season, and/or instance. <br/>
+
+We will expand on what was learned and visualized in project two, by answering such questions with a machine learning project as: <br/>
 •	Have wildfires become more or less frequent over time?<br/>
 •	What areas states are the most and least fire-prone?<br/>
 •	Seasonal impact on size and frequency? <br/>
