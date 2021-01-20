@@ -39,5 +39,5 @@ The websites that are used in this project include: <br/>
 7. Open a browser window and enter localhost:5000.  The application should run.
 
 
-![image](https://i.pinimg.com/originals/bf/e7/e1/bfe7e1743686333c87dc50ea763d70c0.jpg)
+![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nbcnews.com%2Fscience%2Fenvironment%2Fwildfires-rage-climate-experts-warn-future-we-were-worried-about-n1240456&psig=AOvVaw3ozCUytFLWJlLM_W9RR4eW&ust=1611198885346000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDyqdzFqe4CFQAAAAAdAAAAABAD)
 
