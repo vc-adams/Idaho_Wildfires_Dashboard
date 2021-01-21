@@ -9,19 +9,20 @@ Wildfires don’t stop where the wilderness ends. They burn through communities 
 The objective of this project was to extract and explore a publicly available spatial database of wildfires that occurred in the United States from 1992 to 2015 and includes 1.88 million geo-referenced wildfire records, representing a total of 140 million acres burned during the 24-year period. <br/>
 -- <br/>
 
-As explained above, from Project 2, large class wildfire data (Class G only - the largest fires which engulf 5000+ acres) was explored and visualized using a plethora of tools recently learned.  We can expand on that project by utilizing more of the dataset, combining it with hisotical weather data, and creating machine learning models in an attempt to categorize a risk score for the upcoming wildfire season, and/or instance. <br/>
+As explained above, from Project 2, large class wildfire data (Class G only - the largest fires which engulf 5000+ acres) was explored and visualized using a plethora of tools learned in the classroom.  Project 3 aims to expand on that idea: We can combine it with hisotical weather data and draught data backed by the power of a machine learning model in an attempt to categorize a risk score for the upcoming wildfire season, and/or instance, for the user! <br/>
 
-We will expand on what was learned and visualized in project two, by answering such questions with a machine learning project as: <br/>
-•	Can we predict the size of a fire given historical data?<br/>
-•	What areas states are the most and least fire-prone?<br/>
+We are testing both Support Vecotor Machine and Neural Network methods to answuch questions with a machine learning project as: <br/>
+•	Can we predict the size, or in essence give a risk score - for a certain area and data given user-specified inputs?<br/>
+•	What areas of the state [note: to limit the dataset we are utlizing on Idaho data] are the most and least fire-prone?<br/>
 •	Seasonal impact on size and frequency? <br/>
 
 # Resources:<br/>
 The websites that are used in this project include: <br/>
 1.	1.88 Million US Wildfires available from Kaggle <br/>
 - Data for the project will be refined given the number and volume of data exceeding 1,213,546 fires and burning 140,132,509 acres over a 24 year period. <br/>
-- Current proposed data set to focus on .... which results in a refined fire count of .... representing ....of the total acreage burned. <br/>
+- This data set is massive.  We've paired the project down to simply assess the state of Idaho. <br/>
 2.  Weather data will be called via API from https://weatherstack.com/ <br/>
+3.  Drought data will be called from...
 
 # Example of Figures<br/>
 1. 1 <br/>
@@ -30,7 +31,7 @@ The websites that are used in this project include: <br/>
 
 # Recreating Application
 1. We will be making API calls from weatherstack.com and matching that data via dates and lat/long with the wildfire locations. 
-1.
+1. --- this area may not apply to this project if we deploy on heroku
 1. Create a postgres database with database called wildfires_db
 2. Run create_tables_wildfires.sql file to create wildfires table
 3. Import fires_ClassG_YEAR2000_2015.csv into wildfires table
