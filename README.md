@@ -19,8 +19,8 @@ We are testing both Support Vecotor Machine and Neural Network methods to answuc
 # Resources:<br/>
 The Resourced that are used in this project include: <br/>
 1.	1.88 Million US Wildfires available from Kaggle <br/>
-- Data for the project will be refined given the number and volume of data exceeding 1,213,546 fires and burning 140,132,509 acres over a 24 year period. <br/>
-- This data set is massive.  We've paired the project down to simply assess the state of Idaho. <br/>
+•	Data for the project will be refined given the number and volume of data exceeding 1,213,546 fires and burning 140,132,509 acres over a 24 year period. <br/>
+•	This data set is massive.  We've paired the project down to simply assess the state of Idaho. <br/>
 2.  Weather data API: https://weatherstack.com/ <br/>
 3.  Drought data shapefile: https://droughtmonitor.unl.edu/data/GISData.aspx <br/>
 
@@ -34,7 +34,7 @@ The Resourced that are used in this project include: <br/>
 # Recreating Application
 1. This project has been deployed on Heroku:  https://wildfires-part2-app.herokuapp.com/ <br/>
 2. Subcomponents of assembling the project include: <br/>
-  -API call from weatherstack.com and matching that data via dates and lat/long with the wildfire locations. 
+•	API call from weatherstack.com and matching that data via dates and lat/long with the wildfire locations. 
 
 
 
