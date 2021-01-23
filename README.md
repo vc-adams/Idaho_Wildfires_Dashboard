@@ -35,10 +35,10 @@ The Resourced that are used in this project include: <br/>
 # Recreating Application
 1. This project has been deployed on Heroku:  https://wildfires-part2-app.herokuapp.com/ <br/>
 2. Subcomponents of assembling the project include: <br/>
-•	API call from weatherstack.com were initially utilized, until Meteostat ease of use prevailed.
-•	CityPy homework example was utilized to located nearest city for all data.
-•	Drought data shapefiles were merged.  
-•	Weather data was combined with drought data and merged on dates and location. 
+•	API call from weatherstack.com were initially utilized, until Meteostat ease of use prevailed. <br/>
+•	CityPy homework example was utilized to located nearest city for all data. <br/>
+•	Drought data shapefiles were merged. <br/>
+•	Weather data was combined with drought data and merged on dates and location. <br/>
 
 
 ![200911-wildfire-california-worst-widlfire-year-se-236p_f66f4d02e7ec04cbe3ed0c47dfc8037e](https://user-images.githubusercontent.com/58762374/105122573-134acf80-5a9c-11eb-8257-96803a88f7e2.jpg)
