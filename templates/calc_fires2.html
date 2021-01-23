@@ -39,10 +39,10 @@
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/calc_fires">Calculate Fires</a>
+          <a class="nav-link" href="/calc_fires">Predict Fire Class</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/calc_fires2">Calculate Fires2
+          <a class="nav-link" href="/calc_fires2">Idaho Info
             <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -69,7 +69,18 @@
   <br>
   <div class="row">
     <div class="col-md-5 offset-md-1">Map should be here
-      <div id="map" ></div>
+      <div class='tableauPlaceholder' id='viz1611425316300' style='position: relative'><noscript><a href='#'>
+        <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYCCityBike_16088259784810&#47;NewYorkCitiBike&#47;1_rss.png' style='border: none' />
+        </a>
+        </noscript><object class='tableauViz'  style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' /><param name='name' value='NYCCityBike_16088259784810&#47;NewYorkCitiBike' />
+        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NY&#47;NYCCityBike_16088259784810&#47;NewYorkCitiBike&#47;1.png' /> 
+        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' /><param name='language' value='en' /></object>
+      </div>  
     </div>
 
     <div class="col-md-4 offset-md-1">
@@ -101,9 +112,9 @@
         <input type="text" id="D3" name="D3"><br>
         <label for="D4">Drought-Exceptional Drought (0-100):</label>
         <input type="text" id="D4" name="D4"><br>
-        <label for="Precipitation">Precipitation</label>
+        <label for="Precipitation">Precipitation (0-40)</label>
         <input type="text" id="Precipitation" name="Precipitation"><br>
-        <label for="Temperature">Temperature</label>
+        <label for="Temperature">Temperature (0-100)</label>
         <input type="text" id="Temperature" name="Temperature"><br>
         <input type=submit value=Submit>
     </form></div>
@@ -115,7 +126,7 @@
   <script type="text/javascript" src="../static/js/config.js"></script>
   <!-- <script type="text/javascript" src="../static/js/us_counties_20m.js"></script> -->
   <script type="text/javascript" src="../static/js/Idaho_Counties.js"></script>
-  <script src="../static/js/county.js"></script>
+  <script src="../static/js/viz.js"></script>
 
 </body>
 
