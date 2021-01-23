@@ -22,7 +22,8 @@ The Resourced that are used in this project include: <br/>
 •	Data for the project will be refined given the number and volume of data exceeding 1,213,546 fires and burning 140,132,509 acres over a 24 year period. <br/>
 •	This data set is massive.  We've paired the project down to simply assess the state of Idaho. <br/>
 2.  Weather data API: https://weatherstack.com/ <br/>
-3.  Drought data shapefile: https://droughtmonitor.unl.edu/data/GISData.aspx <br/>
+3.  Weather data via Python Libary Meteostat: https://dev.meteostat.net/python/stations.html <br/>
+4.  Drought data shapefiles: https://droughtmonitor.unl.edu/data/GISData.aspx <br/>
 
 # Example of Figures<br/>
 1. Tableau was utilized for aesthetic appeal and interactivity. <br/>
@@ -34,9 +35,10 @@ The Resourced that are used in this project include: <br/>
 # Recreating Application
 1. This project has been deployed on Heroku:  https://wildfires-part2-app.herokuapp.com/ <br/>
 2. Subcomponents of assembling the project include: <br/>
-•	API call from weatherstack.com and matching that data via dates and lat/long with the wildfire locations. 
-
-
+•	API call from weatherstack.com were initially utilized, until Meteostat ease of use prevailed.
+•	CityPy homework example was utilized to located nearest city for all data.
+•	Drought data shapefiles were merged.  
+•	Weather data was combined with drought data and merged on dates and location. 
 
 
 ![200911-wildfire-california-worst-widlfire-year-se-236p_f66f4d02e7ec04cbe3ed0c47dfc8037e](https://user-images.githubusercontent.com/58762374/105122573-134acf80-5a9c-11eb-8257-96803a88f7e2.jpg)
