@@ -26,15 +26,21 @@ The Resourced that are used in this project include: <br/>
 4.  Drought data shapefiles: https://droughtmonitor.unl.edu/data/GISData.aspx <br/>
 
 # Example of Figures<br/>
-1. Tableau was utilized for aesthetic appeal and interactivity. <br/>
+1. Tableau was utilized for aesthetic appeal and interactivity of data. <br/>
 2. Leaflet map provides geograpical interactive component. <br/>
-3.
+3. User inputs allow tool to predict the most statisically viable fire size given the data for current location, etc. <br/>
 4. Slider of events using Javascript https://plotly.com/javascript/sliders/ <br/>
-5. Proposed library to be used www.chartjs.org <br/>
 
-# Recreating Application
-1. This project has been deployed on Heroku:  https://wildfires-part2-app.herokuapp.com/ <br/>
-2. Subcomponents of assembling the project include: <br/>
+
+# Recreating Application<br/>
+1. Clone contents of the github repo. <br/>
+2. Using gitbash or terminal, navigate to the project directory in which you have copied, and run python app.py. <br/>
+3. Open a browswer window and enter localhost:5000 port.  The applciation should run. <br/>
+
+If Heroku size issue solved: <br/>
+This project has been deployed on Heroku (tensorflow library may hinder this step):  https://wildfires-part2-app.herokuapp.com/ <br/>
+
+Subcomponents of assembling the project include: <br/>
 •	API call from weatherstack.com were initially utilized, until Meteostat ease of use prevailed. <br/>
 •	CityPy homework example was utilized to located nearest city for all data. <br/>
 •	Drought data shapefiles were merged. <br/>

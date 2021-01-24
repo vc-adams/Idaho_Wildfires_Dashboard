@@ -2,6 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 import random
+import keras.models
 
 from flask import Flask, flash, request, jsonify, render_template
 
@@ -17,6 +18,13 @@ app = Flask(__name__)
 
 data_path = './static/data/'
 
+def load_model():
+    global new_model
+    new_model = keras.models.load_model('./static/model/fires_class_model_v1.h5')
+    print("Model Loaded")
+     
+
+
 def process_input(data):
     infile=""
     # convert to dataframe for easy processing
@@ -30,6 +38,7 @@ def process_input(data):
     county= 'NAME_' + df['County']
     counties_dummy.at[0, county]=1
     
+    df['DISCOVERY_MONTH_CONVERTED'] = df['DISCOVERY_MONTH_CONVERTED'].astype(np.int64)
     df['Temperature'] = df['Temperature'].astype(float)
     df['Precipitation'] = df['Precipitation'].astype(float)
     df['D0'] = df['D0'].astype(float)
@@ -52,7 +61,16 @@ def process_input(data):
 
     new_df = pd.concat([df, counties_dummy], axis=1)
 
-    # new_df.to_csv(data_path + 'idaho_counties.csv')
+    print("Print Number of cols",len(new_df.columns))
+    
+    print(new_df.dtypes)
+
+    new_df = new_df.values.reshape(-1, 58)
+
+    print("New shape", new_df.shape)
+
+    print("type of new_df", type(new_df))
+    
 
     return new_df
 
@@ -72,9 +90,30 @@ def calc_fires():
     if request.method == 'POST':
         message = "data posted"
         input_data = request.form.to_dict()
-        data = process_input(input_data)
+        data = process_input(input_data) 
+        value = np.argmax(new_model.predict(data))
+
+        print(f"value {value}")
         
-    return render_template('calc_fires.html', result=message)  
+        if value == 0:      
+            fire_class = "A"
+        elif value == 1:
+            fire_class = "B"
+        elif value == 2:
+            fire_class = "C"
+        elif value == 3:
+            fire_class = "D"
+        elif value == 4:
+            fire_class = "E"
+        elif value == 5:
+            fire_class = "F"
+        else:
+            fire_class = "G"
+
+        return render_template('calc_fires.html', result=fire_class)  
+            
+    return render_template('calc_fires.html')  
+
 
     
 
@@ -85,10 +124,11 @@ def calc_fires2():
         message = "data posted"
         input_data = request.form.to_dict()
         data = process_input(input_data)
-        
-    return render_template('calc_fires2.html', result=message)
+ 
+    return render_template('calc_fires2.html')
 
 
 
 if __name__ == '__main__':
+    load_model()
     app.run(debug=True)

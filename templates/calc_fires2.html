@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Calc Fires</title>
+    <title>Idaho Wildfire and Demographic Information</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>    
     <link rel="stylesheet" href="../static/css/style.css">
    
   
@@ -28,7 +28,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Future Fires</a>
+    <a class="navbar-brand" href="/">Idaho Wildfire Information</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,83 +39,128 @@
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/calc_fires">Calculate Fires</a>
+          <a class="nav-link" href="/calc_fires">Predict Fire Class</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/calc_fires2">Calculate Fires2
+          <a class="nav-link" href="/calc_fires2">Idaho Info
             <span class="sr-only">(current)</span>
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Page 3</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  
+  <br><br>
   <div class="row">
     <div class="col-md-4 offset-md-1">
-        <br>
-        <h3>Wildfires By State</h3>
+        <h3>Wildfires</h3>
     </div>
   </div>
-  <div class="row">
-      <div class="col-md-4 offset-md-1">
-          <h3><b>{{result}}</b></h3>
-      </div>
-  </div>
-  <br>
-  <br>
-  <div class="row">
-    <div class="col-md-5 offset-md-1">Map should be here
-      <div id="map" ></div>
-    </div>
 
-    <div class="col-md-4 offset-md-1">
-      <div id="bar"><form method=post enctype=multipart/form-data>
-        <label for="County">County:</label>
-        <select id="County" name="County" onchange="optionChanged()"></select><br>
-        <label for="DISCOVERY_MONTH_CONVERTED">Month:</label>
-        <select id="DISCOVERY_MONTH_CONVERTED" name="DISCOVERY_MONTH_CONVERTED">
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-          <option value=11>11</option>
-          <option value=12>12</option>
-        </select><br>
-        <label for="D0">Drought-Abnormally Dry (0-100):</label>
-        <input type="text" id="D0" name="D0"><br>
-        <label for="D1">Drought-Moderate Drought (0-100):</label>
-        <input type="text" id="D1" name="D1"><br>
-        <label for="D2">Drought-Severe Drought (0-100):</label>
-        <input type="text" id="D2" name="D2"><br>
-        <label for="D3">Drought-Extreme Drought (0-100):</label>
-        <input type="text" id="D3" name="D3"><br>
-        <label for="D4">Drought-Exceptional Drought (0-100):</label>
-        <input type="text" id="D4" name="D4"><br>
-        <label for="Precipitation">Precipitation</label>
-        <input type="text" id="Precipitation" name="Precipitation"><br>
-        <label for="Temperature">Temperature</label>
-        <input type="text" id="Temperature" name="Temperature"><br>
-        <input type=submit value=Submit>
-    </form></div>
-      <br>
+  <div class="row">
+    <div class="col-md-5 offset-md-1">
+      <div class='tableauPlaceholder' id='viz1611469542182' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Map_Nmbr_Frs&#47;1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' /> 
+          <param name='site_root' value='' />
+          <param name='name' value='ID_weather_fire_20210123_1253&#47;Map_Nmbr_Frs' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='no' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Map_Nmbr_Frs&#47;1.png' /> 
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>                
+    </div>
+    <div class="col-md-5">
+      <div class='tableauPlaceholder' id='viz1611512493908' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Chrt_Nmbr_Frs&#47;1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+          <param name='name' value='ID_weather_fire_20210123_1253&#47;Chrt_Nmbr_Frs' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='no' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Chrt_Nmbr_Frs&#47;1.png' /> <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+          <param name='language' value='en' />
+        </object>
+      </div>   
     </div>
   </div>
-  <!-- /.row -->
+  <br>
+  <div class="row">
+    <div class="col-md-4 offset-md-1">
+        <h3>Average Precipitation</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5 offset-md-1">
+      <div class='tableauPlaceholder' id='viz1611514408867' style='position: relative'><noscript><a href='#'><img alt=' ' 
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;8J&#47;8JY5S23D2&#47;1_rss.png' style='border: none' /></a>
+      </noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;8JY5S23D2' /> <param name='toolbar' value='no' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;8J&#47;8JY5S23D2&#47;1.png' /> 
+        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                        
+    </div>
+    <div class="col-md-5">
+      <div class='tableauPlaceholder' id='viz1611514824477' style='position: relative'><noscript><a href='#'><img alt=' ' 
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Chrt_Avg_Prcp&#47;1_rss.png' style='border: none' />
+      </a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+        <param name='name' value='ID_weather_fire_20210123_1253&#47;Chrt_Avg_Prcp' /><param name='tabs' value='no' /><param name='toolbar' value='no' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Chrt_Avg_Prcp&#47;1.png' /> 
+        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4 offset-md-1">
+        <h3>Average Temperature</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5 offset-md-1">
+      <div class='tableauPlaceholder' id='viz1611515116970' style='position: relative'><noscript><a href='#'><img alt=' ' 
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Map_Avg_Temp&#47;1_rss.png' style='border: none' /></a>
+      </noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' />
+         <param name='site_root' value='' /><param name='name' value='ID_weather_fire_20210123_1253&#47;Map_Avg_Temp' /><param name='tabs' value='no' />
+         <param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Map_Avg_Temp&#47;1.png' /> 
+         <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+         <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
+    </div>
+    <div class="col-md-5">
+      <div class='tableauPlaceholder' id='viz1611515336588' style='position: relative'><noscript><a href='#'><img alt=' ' 
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Chrt_Avg_Temp&#47;1_rss.png' style='border: none' /></a>
+      </noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' /><param name='name' value='ID_weather_fire_20210123_1253&#47;Chrt_Avg_Temp' /><param name='tabs' value='no' />
+        <param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;ID_weather_fire_20210123_1253&#47;Chrt_Avg_Temp&#47;1.png' />
+        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
+    </div>
+  </div>
       
   <script type="text/javascript" src="../static/js/config.js"></script>
-  <!-- <script type="text/javascript" src="../static/js/us_counties_20m.js"></script> -->
   <script type="text/javascript" src="../static/js/Idaho_Counties.js"></script>
-  <script src="../static/js/county.js"></script>
+  <script src="../static/js/viz.js"></script>
 
 </body>
 
