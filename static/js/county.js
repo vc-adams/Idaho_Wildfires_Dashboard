@@ -35,7 +35,7 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend'),
-        sqmi = [0, 500, 1000, 2000, 4000, 60000, 8000, 10000],
+        sqmi = [0, 500, 1000, 2000, 4000, 6000, 8000, 10000],
         labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval
@@ -116,6 +116,224 @@ function optionChanged(){
 
         map.flyTo([lat, long], 8)
 
+        d3.select("#myBarChart").remove()
+
+        var age = countyFiltered.map(function(d){
+            return [d.properties.AGE_UNDER5,
+                d.properties.AGE_5_9, 
+                d.properties.AGE_10_14,
+                d.properties.AGE_15_19,
+                d.properties.AGE_20_24,
+                d.properties.AGE_25_34,
+                d.properties.AGE_35_44,
+                d.properties.AGE_45_54,
+                d.properties.AGE_55_64,
+                d.properties.AGE_65_74,
+                d.properties.AGE_75_84,
+                d.properties.AGE_85_UP                            
+            ]
+
+        });
+
+        var ageLabels = ['Age Unders', 'Age 5-9', 'Age 10-14', 'Age 15-19', 'Age 20-24',
+                'Age 25-34', 'Age 35-44', 'Age 45-54', 'Age 55-64', 'Age 65-74',
+                'Age 75-84', 'Age 85+' 
+            ]
+
+        console.log("age", age)
+
+        //Add the canvas back to the html
+		d3.select("#canvasBarChart")
+		.append("canvas")
+		.attr("id", "myBarChart")
+		
+
+		//Create the bar chart for state totals
+		var ctx = document.getElementById('myBarChart').getContext('2d');
+		var myBarchart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'bar',
+
+			// The data for our dataset
+			data: {
+				labels: ageLabels,
+				datasets: [{
+					label: `Age Demographics - ${sel_val}`,
+					backgroundColor: '#e0ecf4',
+					borderColor: '#e0ecf4',
+					data: age[0]
+				}]
+			},
+
+			// Configuration options go here
+			options: {scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			}}
+        });
+        
+
+        d3.select("#myBarChart2").remove()
+
+        var race = countyFiltered.map(function(d){
+            return [d.properties.WHITE,
+                d.properties.BLACK, 
+                d.properties.AMERI_ES,
+                d.properties.ASIAN,
+                d.properties.HAWN_PI,
+                d.properties.HISPANIC,
+                d.properties.OTHER,
+                d.properties.MULT_RACE                            
+            ]
+
+        });
+
+        var raceLabels = ['White' , 'Black', 'Native American', 'Asian', 'Pacific Islander',
+                'Hispanic', 'Other', 'Multi-Race'
+            ]
+
+        console.log("race", race)
+
+        //Add the canvas back to the html
+		d3.select("#canvasBarChart2")
+		.append("canvas")
+		.attr("id", "myBarChart2")
+		
+
+		//Create the bar chart for state totals
+		var ctx = document.getElementById('myBarChart2').getContext('2d');
+		var myBarchart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'bar',
+
+			// The data for our dataset
+			data: {
+				labels: raceLabels,
+				datasets: [{
+					label: `Race Demographics - ${sel_val}`,
+					backgroundColor: '#9ebcda',
+					borderColor: '#9ebcda',
+					data: race[0]
+				}]
+			},
+
+			// Configuration options go here
+			options: {scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			}}
+		});
+
+
+        d3.select("#myBarChart3").remove()
+
+        var crops = countyFiltered.map(function(d){
+            return [
+                d.properties.NO_FARMS12,
+                d.properties.AVE_SIZE12,
+                d.properties.CROP_ACR12,                       
+            ]
+
+        });
+
+        var cropsLabels = ['Number of Farms' , 'Average Farm Size', 'Total Crop Average'
+            ]
+
+        console.log("crops", cropsLabels)
+
+        //Add the canvas back to the html
+		d3.select("#canvasBarChart3")
+		.append("canvas")
+		.attr("id", "myBarChart3")
+		
+
+		//Create the bar chart for state totals
+		var ctx = document.getElementById('myBarChart3').getContext('2d');
+		var myBarchart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'bar',
+
+			// The data for our dataset
+			data: {
+				labels: cropsLabels,
+				datasets: [{
+					label: `Farm and Crop Information  - ${sel_val}`,
+					backgroundColor: '#8c6bb1',
+					borderColor: '#8c6bb1',
+					data: crops[0]
+				}]
+			},
+
+			// Configuration options go here
+			options: {scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			}}
+		});
+
+
+        d3.select("#myBarChart4").remove()
+
+        var households = countyFiltered.map(function(d){
+            return [
+                d.properties.HSE_UNITS,
+                d.properties.VACANT,
+                d.properties.OWNER_OCC,
+                d.properties.RENTER_OCC,                       
+            ]
+
+        });
+
+        var householdsLabels = ['Housing Units' , 'Vacant Units', 'Owner Occupied', 'Renter Occupied'
+            ]
+
+        console.log("households", householdsLabels)
+
+        //Add the canvas back to the html
+		d3.select("#canvasBarChart4")
+		.append("canvas")
+		.attr("id", "myBarChart4")
+		
+
+		//Create the bar chart for state totals
+		var ctx = document.getElementById('myBarChart4').getContext('2d');
+		var myBarchart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'bar',
+
+			// The data for our dataset
+			data: {
+				labels: householdsLabels,
+				datasets: [{
+					label: `Household Information - ${sel_val}`,
+					backgroundColor: '#810f7c',
+					borderColor: '#810f7c',
+					data: households[0]
+				}]
+			},
+
+			// Configuration options go here
+			options: {scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			}}
+		});
+
+
+
+
         // var data = [{
         //     type: "choroplethmapbox", locations: ["NY", "MA", "VT"], z: [-50, -10, -20],
         //     geojson: "https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/us-states.json"
@@ -188,14 +406,14 @@ function optionChanged(){
 // }
 
 function getColor(d) {
-    return d > 10000 ? '#800026' :
-           d > 8000 ? '#BD0026' :
-           d > 6000 ? '#E31A1C' :
-           d > 4000  ? '#FC4E2A' :
-           d > 2000  ? '#FD8D3C' :
-           d > 1000  ? '#FEB24C' :
-           d > 500   ? '#FED976' :
-                      '#FFEDA0';
+    return d > 10000 ? '#4d004b' :
+           d > 8000 ? '#810f7c' :
+           d > 6000 ? '#8c6bb1' :
+           d > 4000  ? '#8c96c6' :
+           d > 2000  ? '#9ebcda' :
+           d > 1000  ? '#bfd3e6' :
+           d > 500   ? '#e0ecf4' :
+                      '#f7fcfd';
 }
 
 function style(feature) {
