@@ -39,25 +39,24 @@ def process_input(data):
     counties_dummy.at[0, county]=1
     
     df['DISCOVERY_MONTH_CONVERTED'] = df['DISCOVERY_MONTH_CONVERTED'].astype(np.int64)
-    df['Temperature'] = df['Temperature'].astype(float)
-    df['Precipitation'] = df['Precipitation'].astype(float)
+    
     df['D0'] = df['D0'].astype(float)
     df['D1'] = df['D1'].astype(float)
     df['D2'] = df['D2'].astype(float)
     df['D3'] = df['D3'].astype(float)
     df['D4'] = df['D4'].astype(float)
 
-    df['DAY_AVG_TEMP_1'] = df['Temperature'] * random.uniform(1.015, 1.025)
-    df['DAY_AVG_TEMP_2'] = df['Temperature'] * random.uniform(1.015, 1.025)
-    df['DAY_AVG_TEMP_3'] = df['Temperature'] * random.uniform(1.015, 1.025)
-    df['DAY_AVG_TEMP_4'] = df['Temperature'] * random.uniform(1.015, 1.025)
+    df['DAY_AVG_TEMP_1'] =  df['DAY_AVG_TEMP_1'].astype(float)
+    df['DAY_AVG_TEMP_2'] =  df['DAY_AVG_TEMP_2'].astype(float)
+    df['DAY_AVG_TEMP_3'] =  df['DAY_AVG_TEMP_3'].astype(float)
+    df['DAY_AVG_TEMP_4'] =  df['DAY_AVG_TEMP_4'].astype(float)
 
-    df['DAY_PRCP_1'] = df['Precipitation'] * random.uniform(1.015, 1.025)
-    df['DAY_PRCP_2'] = df['Precipitation'] * random.uniform(1.015, 1.025)
-    df['DAY_PRCP_3'] = df['Precipitation'] * random.uniform(1.015, 1.025)
-    df['DAY_PRCP_4'] = df['Precipitation'] * random.uniform(1.015, 1.025)
+    df['DAY_PRCP_1'] = df['DAY_PRCP_1'].astype(float)
+    df['DAY_PRCP_2'] = df['DAY_PRCP_2'].astype(float)
+    df['DAY_PRCP_3'] = df['DAY_PRCP_3'].astype(float)
+    df['DAY_PRCP_4'] = df['DAY_PRCP_4'].astype(float)
 
-    df = df.drop(['County','Temperature', 'Precipitation'], axis = 1)
+    df = df.drop(['County'], axis = 1)
 
     new_df = pd.concat([df, counties_dummy], axis=1)
 
@@ -94,22 +93,12 @@ def calc_fires():
         value = np.argmax(new_model.predict(data))
 
         print(f"value {value}")
-        
-        if value == 0:      
-            fire_class = "A"
-        elif value == 1:
-            fire_class = "B"
-        elif value == 2:
-            fire_class = "C"
-        elif value == 3:
-            fire_class = "D"
-        elif value == 4:
-            fire_class = "E"
-        elif value == 5:
-            fire_class = "F"
-        else:
-            fire_class = "G"
 
+        if value == 0:      
+            fire_class = "Small"
+        else :
+            fire_class = "Large"
+        
         return render_template('calc_fires.html', result=fire_class)  
             
     return render_template('calc_fires.html')  
