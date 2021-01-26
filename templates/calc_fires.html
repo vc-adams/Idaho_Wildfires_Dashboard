@@ -41,7 +41,7 @@
           <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/calc_fires">Predict Fire Class</a>
+          <a class="nav-link" href="/calc_fires">Predict Fire Size</a>
           <span class="sr-only">(current)</span>
         </li>
         <li class="nav-item">
@@ -56,12 +56,12 @@
   <div class="row">
     <div class="col-md-4 offset-md-1">
         <br>
-        <h3>Wildfires: Predict Fire Class</h3>
+        <h3>Wildfires: Predict Fire Size</h3>
     </div>
   </div>
   <div class="row">
       <div class="col-md-4 offset-md-1">
-          <h3><b>Predicted Fire Class:  {{result}}</b></h3>
+          <h3><b>Fire Size:  {{result}}</b></h3>
       </div>
   </div>
   <br>
@@ -101,10 +101,22 @@
           <input type="text" id="D3" name="D3"><br>
           <label for="D4">Drought-Exceptional Drought (0-100):</label>
           <input type="text" id="D4" name="D4"><br>
-          <label for="Precipitation">Precipitation (0-40)</label>
-          <input type="text" id="Precipitation" name="Precipitation"><br>
-          <label for="Temperature">Temperature (0-120)</label>
-          <input type="text" id="Temperature" name="Temperature"><br>
+          <label for="DAY_PRCP_1">Precipitation (0-40)</label>
+          <input type="text" id="DAY_PRCP_1" name="DAY_PRCP_1"><br>
+          <label for="DAY_PRCP_2">Precipitation (0-40)</label>
+          <input type="text" id="DAY_PRCP_2" name="DAY_PRCP_2"><br>
+          <label for="DAY_PRCP_3">Precipitation (0-40)</label>
+          <input type="text" id="DAY_PRCP_3" name="DAY_PRCP_3"><br>
+          <label for="DAY_PRCP_4">Precipitation (0-40)</label>
+          <input type="text" id="DAY_PRCP_4" name="DAY_PRCP_4"><br>
+          <label for="DAY_AVG_TEMP_1">Temperature 1 (0-120)</label>
+          <input type="text" id="DAY_AVG_TEMP_1" name="DAY_AVG_TEMP_1"><br>
+          <label for="DAY_AVG_TEMP_2">Temperature 2 (0-120)</label>
+          <input type="text" id="DAY_AVG_TEMP_2" name="DAY_AVG_TEMP_2"><br>
+          <label for="DAY_AVG_TEMP_3">Temperature 3 (0-120)</label>
+          <input type="text" id="DAY_AVG_TEMP_3" name="DAY_AVG_TEMP_3"><br>
+          <label for="DAY_AVG_TEMP_4">Temperature 4 (0-120)</label>
+          <input type="text" id="DAY_AVG_TEMP_4" name="DAY_AVG_TEMP_4"><br>
           <input type=submit value=Submit>
         </form>
       </div>
