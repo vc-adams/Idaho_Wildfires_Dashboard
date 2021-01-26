@@ -29,8 +29,6 @@ The Resourced that are used in this project include: <br/>
 1. Tableau was utilized for aesthetic appeal and interactivity of data. <br/>
 2. Leaflet map provides geograpical interactive component. <br/>
 3. User inputs allow tool to predict the most statisically viable fire size given the data for current location, etc. <br/>
-4. Slider of events using Javascript https://plotly.com/javascript/sliders/ <br/>
-
 
 # Recreating Application<br/>
 1. Clone contents of the github repo. <br/>
