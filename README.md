@@ -43,10 +43,10 @@ This project has been deployed on Heroku: https://wildfires-part2-app.herokuapp.
 
 # Example of Figures<br/>
 1. Tableau was utilized for aesthetic appeal and interactivity of data. <br/>
-2. ![image](https://user-images.githubusercontent.com/67811128/113464747-c0bf5500-93f4-11eb-884d-d0f11aa5bc2a.png)
-3. Leaflet map provides geograpical interactive component. <br/>
-4. User inputs allow tool to predict the most statisically viable fire size given the data for current location, etc. <br/>
-5. ![image](https://user-images.githubusercontent.com/67811128/113464717-8e155c80-93f4-11eb-808c-623b45d19a4a.png)
+![image](https://user-images.githubusercontent.com/67811128/113464747-c0bf5500-93f4-11eb-884d-d0f11aa5bc2a.png)
+2. Leaflet map provides geograpical interactive component. <br/>
+3. User inputs allow tool to predict the most statisically viable fire size given the data for current location, etc. <br/>
+![image](https://user-images.githubusercontent.com/67811128/113464717-8e155c80-93f4-11eb-808c-623b45d19a4a.png)
 
 
 
